@@ -20,17 +20,32 @@ To write a program to perform selection sort and insertion sort using python pro
 ## Program:
 i)	#Selection Sort
 ```
-
-
-
+def insertion_sort(nums):
+ for i in range(1,len(nums)):
+     item_to_insert =nums[i]
+     j=i-1
+     while j>=0 and nums[j]>item_to_insert:
+         nums[j+1]=nums[j]
+         j -=1
+     nums[j+1]=item_to_insert
+list_of_nums = eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
 
 
 ```
 ii)	#Insertion Sort
 ```
-
-
-
+def insertion_sort(nums):
+ for i in range(len(nums)):
+     lowest_value_index =i
+     for j in range(i+1,len(nums)):
+         if nums[j]<nums[lowest_value_index]:
+             lowest_value_index=j
+     nums[i],nums[lowest_value_index]=nums[lowest_value_index],nums[i]
+list_of_nums= eval(input())
+insertion_sort(list_of_nums)
+print(list_of_nums)
 
 
 
@@ -38,6 +53,8 @@ ii)	#Insertion Sort
 
 ## Output:
 
+![WhatsApp Image 2023-12-30 at 21 53 34_37eb8161](https://github.com/ibrahimfedahs/Sorting-Algorithm/assets/150319493/db7cb49a-4bbf-4ec5-aa9e-f11963819b07)
+![WhatsApp Image 2023-12-30 at 21 54 11_f845ce51](https://github.com/ibrahimfedahs/Sorting-Algorithm/assets/150319493/68e2fe32-0193-40e0-95c8-62f549f2094b)
 
 ## Result:
 Thus the program is written to perform selection sort and insertion sort using python programming.
